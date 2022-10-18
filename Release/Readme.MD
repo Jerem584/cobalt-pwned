@@ -18,3 +18,8 @@ kernel & usermode are both encoded in base64 for network streaming (lol)
 
 
 https://www.virustotal.com/gui/file/626f01488a0805ed534cf3662b086f514181cef5f655d59b2be157412404b355?nocache=1
+
+# VirusTotal (at least my thing appear 0/71 (unless their loader lol))
+
+
+https://www.virustotal.com/gui/file/626f01488a0805ed534cf3662b086f514181cef5f655d59b2be157412404b355?nocache=1

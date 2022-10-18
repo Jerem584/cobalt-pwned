@@ -1,3 +1,9 @@
+
+# Info
+
+usermode_old is the first version i dumped
+kernel & usermode are both encoded in base64 for network streaming (lol)
+
 # To "make" the crack great again 
 
 1) Install CFF EXPLORER (https://ntcore.com/files/ExplorerSuite.exe)
@@ -9,3 +15,6 @@
 7) click rebuild import table
 8) close cff explorer, on close it should open a popup "Do you want to overwrite client.exe?" click yes
 9) Crack is done enjoy
+
+
+https://www.virustotal.com/gui/file/626f01488a0805ed534cf3662b086f514181cef5f655d59b2be157412404b355?nocache=1

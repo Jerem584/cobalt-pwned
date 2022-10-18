@@ -25,6 +25,8 @@ aav666 -> gave me loader and an anydesk to test their shit on :)
 ## Why the leak
 
 https://www.elitepvpers.com/forum/call-duty/5022604-exposing-cobalt-solutions.html
+https://cdn.discordapp.com/attachments/1020007679479005205/1031364093845712926/Screenshot_20221016_180751.jpg
+
 
 -> got banned in 2 games
 -> shit ass rat

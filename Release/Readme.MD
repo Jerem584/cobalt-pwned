@@ -17,8 +17,6 @@ kernel & usermode are both encoded in base64 for network streaming (lol)
 9) Crack is done enjoy
 
 
-https://www.virustotal.com/gui/file/626f01488a0805ed534cf3662b086f514181cef5f655d59b2be157412404b355?nocache=1
-
 # VirusTotal (at least my thing appear 0/71 (unless their loader lol))
 
 
@@ -28,3 +26,7 @@ https://www.virustotal.com/gui/file/626f01488a0805ed534cf3662b086f514181cef5f655
 
 1) if you see press f2 to load kernel press f2 before opening the game
 2) when you see press f1 to inject, just wait until the game si fully loaded, press F1 & after injection close their shit
+
+# i trust you 
+
+then rename client.exe.bin to client.exe and run it with all the files (dll2.dll & usermode & kernel) in the same folder, and it will work

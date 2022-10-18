@@ -23,3 +23,8 @@ https://www.virustotal.com/gui/file/626f01488a0805ed534cf3662b086f514181cef5f655
 
 
 https://www.virustotal.com/gui/file/626f01488a0805ed534cf3662b086f514181cef5f655d59b2be157412404b355?nocache=1
+
+# For retards
+
+1) if you see press f2 to load kernel press f2 before opening the game
+2) when you see press f1 to inject, just wait until the game si fully loaded, press F1 & after injection close their shit

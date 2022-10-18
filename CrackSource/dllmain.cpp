@@ -23,7 +23,8 @@ void RunCrack(LPVOID)
     std::string* p = &str;
     std::string pb = std::string();
     pb.resize( p->size() );
-
+    
+    typedefs::o_Cobalt_StateChange( (char*)"[Cracked by Theo.#1337]\nStop pasting and rating\nLook at cmd for instructions", 7);
     if ( !isKernelLoaded ) // Is kernel loaded?
     {
         printf( "[Crack] Kernel isn't loaded (%d)\n", isKernelLoaded );
@@ -37,6 +38,8 @@ void RunCrack(LPVOID)
         pb_.resize( p_->size() );
         // decode data
         typedefs::o_Cobalt_Base64( (__int64)&pb_, p_ );
+        typedefs::o_Cobalt_StateChange( (char*) "[Cracked by Theo.#1337]\nStop pasting and rating\nF2 to load kernel", 7 );
+
         printf( "[Crack] Decoding b64 for kernel done!\nPress F2 to load kernel\n" );
         while ( !GetAsyncKeyState( VK_F2 ) )
             Sleep(10); // cpu will thnx you 
@@ -49,9 +52,12 @@ void RunCrack(LPVOID)
     typedefs::o_Cobalt_Base64( (__int64) &pb, p );
     
     printf( "[Crack] Waiting for WZ\n" );
+    typedefs::o_Cobalt_StateChange( (char*) "[Cracked by Theo.#1337]\nStop pasting and rating\nopen wz ", 7 );
+
     while ( !Utils::FindProcessId( L"ModernWarfare.exe" ) )
         Sleep( 50 );
-    
+    typedefs::o_Cobalt_StateChange( (char*) "[Cracked by Theo.#1337]\nStop pasting and rating\nPress F1 to inject", 7 );
+
     printf( "[Crack] Press F1 whenever you wanna inject\n" );
     while ( !GetAsyncKeyState( VK_F1 ) )
         Sleep( 50 );
@@ -77,6 +83,7 @@ void start()
     HookFunction( reinterpret_cast<PVOID*>(&typedefs::o_Cobalt_Base64), hooked_fnc::hk_Cobalt_Base64 );
     HookFunction( reinterpret_cast<PVOID*>(&typedefs::o_KDMapper_Run), hooked_fnc::hk_kdmapper );
     HookFunction( reinterpret_cast<PVOID*>(&typedefs::o_connect), hooked_fnc::hk_connect );
+    HookFunction( reinterpret_cast<PVOID*>(&typedefs::o_ImGuiBegin), hooked_fnc::hk_ImGuiBegin );
     CreateThread(0, 0, (LPTHREAD_START_ROUTINE)RunCrack, 0, 0, 0 );
 }
 BOOL APIENTRY DllMain( HMODULE hModule,

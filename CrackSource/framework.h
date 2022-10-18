@@ -65,11 +65,15 @@ namespace typedefs {
 	// a json method in nlohmann lib, idk which one thop
 	typedef bool( __fastcall* t_nlohmann_json )(char* a1);
 
+
+	typedef bool( __fastcall* t_ImGuiBegin )(const char* name, bool p_open, uint32_t flags);
+
 	auto o_KDMapper_Run = (t_KDMapper_Run) (addr + 0xA5C20);
 	auto o_Cobalt_MapAndRun = (t_Cobalt_MapAndRun) (addr + 0xAB4D0);
 	auto o_Cobalt_Base64 = (t_Cobalt_Base64) (addr + 0x10A630);
 	auto o_Cobalt_StateChange = (t_Cobalt_StateChange) (addr + 0xA2CF0);
 	auto o_nlohmann_json = (t_nlohmann_json) (addr + 0x1A6A0);
+	auto o_ImGuiBegin = (t_ImGuiBegin) (addr + 0x263D0);
 
 	// Functions that use boost asio to connect to their ws (shit)
 	typedef int( __stdcall* t_connect )(std::string* lol);
@@ -80,7 +84,7 @@ namespace hooked_fnc
 {
 	__int64 hk_Cobalt_StateChange( char* a1, unsigned int a2 )
 	{
-		printf( "[Cobalt] State changed to = %s (%llX)\n", a1, PVOID( uintptr_t( _ReturnAddress() ) - addr ) );
+		printf( "[Cobalt] State changed to = %s (%llX) (%d)\n", a1, PVOID( uintptr_t( _ReturnAddress() ) - addr ), a2 );
 		return typedefs::o_Cobalt_StateChange( a1, a2 );
 	}
 	__int64 hk_Cobalt_Base64( __int64 a1, std::string* a2 ) {
@@ -100,5 +104,9 @@ namespace hooked_fnc
 	{
 		printf( "[Protection] Blocked connect for security purpose\n" );
 		return 0;
+	}
+	bool __fastcall hk_ImGuiBegin( const char* name, bool p_open, uint32_t flags )
+	{
+		return typedefs::o_ImGuiBegin( std::string(name).find("cobalt") != std::string::npos ? "Crack by Theo.#1337" : name, p_open, flags );
 	}
 };

@@ -69,3 +69,5 @@ Source code can be found in the folder CrackSource/ and the "release" version of
 
 
 Enjoy ;) and remember ! STOP PASTING (and putting virus in your loader), thanks <3
+
+idb:  https://cdn.discordapp.com/attachments/1031765742581973113/1031767768153993276/client.exe.i64

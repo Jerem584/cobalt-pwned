@@ -21,7 +21,7 @@ then rename client.exe.bin to client.exe and run it with all the files (dll2.dll
 9) Crack is done enjoy
 
 
-# VirusTotal (at least my thing appear 0/71 (unless their loader lol))
+# VirusTotal (at least my thing appear 0/71 (unlike their loader lol))
 
 
 https://www.virustotal.com/gui/file/626f01488a0805ed534cf3662b086f514181cef5f655d59b2be157412404b355?nocache=1
